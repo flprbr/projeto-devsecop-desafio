@@ -13,9 +13,9 @@ fetch('db.json')
             list.appendChild(li);
         });
     })
-    .catch(err => {        
-        document.getElementById('db-status').innerText =
-            'Erro interno: ' + err.stack;
+    .catch(err => {
+        console.error(err);
+        document.getElementById('db-status').innerText = 'Erro ao conectar ao banco de dados.';
     });
 
 // Adiciona nova tarefa na tela
